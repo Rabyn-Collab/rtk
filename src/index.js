@@ -1,14 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import App from "./App";
-import { store } from "./features/store";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
 
-ReactDOM.render(
+import { ApiProvider } from '@reduxjs/toolkit/dist/query/react'
+import { apiSlice } from './features/api/apiSlice'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <ApiProvider api={apiSlice}>
       <App />
-    </Provider>
+    </ApiProvider>
   </React.StrictMode>,
-  document.getElementById("root")
-);
+)
