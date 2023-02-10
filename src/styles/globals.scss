@@ -1,0 +1,35 @@
+:root {
+  --clr-primary: #078852;
+  --clr-primary-light: #19a968;
+  --clr-white: #fff;
+  --clr-grey: #5c5c5c;
+  --clr-black: #000;
+  --clr-bg: #1e2833;
+  --fw-body: 300;
+  --fw-bold: 800;
+  --fw-title: 500;
+  --fw-number: 800;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .MuiBadge-badge {
+    top: 15px !important;
+    border: 2px solid #fff !important;
+    padding: 0 4px !important;
+  }
+}
+
+.MuiDrawer-paper {
+  box-sizing: border-box !important;
+  width: 350px !important;
+  @media only screen and (max-width: 900px) {
+    width: 70% !important;
+  }
+}
